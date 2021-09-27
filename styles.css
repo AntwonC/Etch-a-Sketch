@@ -1,5 +1,7 @@
 .grid-container {
     display: flex;
     flex-flow: row wrap; 
-    width: 400px;
+    width: 420px;
+    margin: 0 auto;
+    margin-top: 250px;
 }
