@@ -5,3 +5,17 @@
     margin: 0 auto;
     margin-top: 250px;
 }
+
+.options-container {
+    display: flex; 
+    
+    width: 50px;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+#clearButton {
+    margin-right: 50px;
+    margin-left: 730px;
+}
