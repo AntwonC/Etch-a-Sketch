@@ -6,6 +6,7 @@ const gridContainer = document.querySelector(".grid-container");
 const actualContainer = document.querySelector(".actual-grid");
 const clear = document.querySelector("#clearButton"); 
 const rainbowEffect = document.querySelector("#rainbowButton"); 
+const eraser = document.querySelector("#eraserButton"); 
 const slider = document.querySelector("#myRange"); 
 const slideContainer = document.querySelector(".slideContainer"); 
 const colorPicker = new iro.ColorPicker("#picker", {
@@ -52,6 +53,7 @@ function addHoverEffect(color) {
 
 
 function clearGrid(value) {
+    eraser.style.backgroundColor = "yellow"; 
    // console.log("Value in clearGrid(): " + value); 
     const squareGrid = document.querySelectorAll(".square"); 
     let newGrid = null; 
@@ -67,6 +69,7 @@ function clearGrid(value) {
 }
 
 function rainbowSquares() {
+    eraser.style.backgroundColor = "yellow"; 
     const squareGrid = document.querySelectorAll(".square"); 
 
     let counter = 0; 
@@ -91,6 +94,7 @@ function rainbowSquares() {
 }
 
 function changeSliderText(sliderValue) {
+    eraser.style.backgroundColor = "yellow"; 
     sliderTextValue.textContent = `${sliderValue}x${sliderValue}`;
 }
 
@@ -99,6 +103,20 @@ function changeGrid(sliderValue) {
     clearGrid(sliderValue);
     reloadGrid(sliderValue); 
    
+}
+
+function eraserEffect() {
+    eraser.style.backgroundColor = "white"; 
+    const squareGrid = document.querySelectorAll(".square"); 
+
+    squareGrid.forEach((squareBox) => {
+
+    squareBox.addEventListener("mouseover", (e) => {
+        squareBox.style.backgroundColor = "white";
+        //console.log("Hovered over");
+    
+    });
+});
 }
 
 /* Shows the current grid STARTS */ 
@@ -116,6 +134,7 @@ clear.addEventListener("click", () =>{
 rainbowEffect.addEventListener("click", rainbowSquares); 
 
 colorPicker.on("color:change", function(color) {
+    eraser.style.backgroundColor = "yellow"; 
     addHoverEffect(color.hexString);
     //console.log(color.hexString); 
 });
@@ -125,50 +144,6 @@ slider.addEventListener("change", () => {
     changeGrid(slider.value);
 });
 
-
-/* Generation of 16x16 grid STARTS*/
-/* for(let i = 0; i < gridSize; i++) {
-    for(let j = 0; j < gridSize; j++) {
-        
-        const squareElement = document.createElement("div"); 
-        squareElement.style = `background-color: #e6ebe6; height: 25px; width: 25px;`; 
-        squareElement.classList.add("square");
-        actualContainer.style.gridTemplateColumns = `repeat(${gridSize}, minmax(0,1fr) [col-start])`;
-        actualContainer.style.gridTemplateRows = `repeat(${gridSize}, minmax(0,1fr) [row-start])`;
-       // actualContainer.style = `grid-template-columns: repeat(${gridSize}, minmax(0,1fr) [col-start]);`;
-        //actualContainer.style = `grid-template-rows: repeat(${gridSize}, minxmax(0,1fr) [row-end]);`;
-        actualContainer.appendChild(squareElement);  
-
-        counter++; 
-    
-    }
-    // Subtract one from height and width for anything > 16
-} */
+eraser.addEventListener("click", eraserEffect);
 
 
-//console.log(counter); 
-/* Generation of 16x16 grid ENDS*/
-
-/* The "pen-like" effect of hovering over elements STARTS */
-/*const squareGrid = document.querySelectorAll(".square"); 
-
-squareGrid.forEach((squareBox) => {
-
-    squareBox.addEventListener("mouseover", (e) => {
-        squareBox.style.backgroundColor = "red";
-        //console.log("Hovered over");
-       
-    });
-}); */
-/* The "pen-like" effect of hovering over elements ENDS */
-
-
-
-
-
-
-
-
-
-//console.log(squareGrid); 
-//console.log(counter); 
