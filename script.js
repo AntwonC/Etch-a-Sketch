@@ -24,11 +24,9 @@ function reloadGrid(value) {
             squareElement.classList.add("square");
             actualContainer.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
             actualContainer.style.gridTemplateRows = `repeat(${value}, 1fr)`;
-           // actualContainer.style = `grid-template-columns: repeat(${gridSize}, minmax(0,1fr) [col-start]);`;
-            //actualContainer.style = `grid-template-rows: repeat(${gridSize}, minxmax(0,1fr) [row-end]);`;
             actualContainer.appendChild(squareElement);  
     
-           // counter++; 
+           
         
         }
         
@@ -45,7 +43,7 @@ function addHoverEffect(color) {
 
         squareBox.addEventListener("mouseover", (e) => {
             squareBox.style.backgroundColor = color;
-            //console.log("Hovered over");
+           
         
         });
     });
@@ -54,7 +52,7 @@ function addHoverEffect(color) {
 
 function clearGrid(value) {
     eraser.style.backgroundColor = "yellow"; 
-   // console.log("Value in clearGrid(): " + value); 
+  
     const squareGrid = document.querySelectorAll(".square"); 
     let newGrid = null; 
 
@@ -62,7 +60,7 @@ function clearGrid(value) {
             squareBox.style.backgroundColor = "white";
     });
 
-    //newGrid = Number(prompt("Enter a number for a new grid"));
+ 
     actualContainer.textContent = ''; 
     reloadGrid(value); 
 
@@ -99,7 +97,7 @@ function changeSliderText(sliderValue) {
 }
 
 function changeGrid(sliderValue) {
-    //console.log(sliderValue);
+    
     clearGrid(sliderValue);
     reloadGrid(sliderValue); 
    
@@ -113,7 +111,7 @@ function eraserEffect() {
 
     squareBox.addEventListener("mouseover", (e) => {
         squareBox.style.backgroundColor = "white";
-        //console.log("Hovered over");
+        
     
     });
 });
@@ -127,23 +125,25 @@ slideContainer.appendChild(sliderTextValue);
 /* Shows the current grid ENDS */
 
 reloadGrid(DEFAULTSIZE); 
-
+// Adding event listener to the CLEAR button
 clear.addEventListener("click", () =>{
     clearGrid(slider.value); 
 }); 
-rainbowEffect.addEventListener("click", rainbowSquares); 
 
+// The RAINBOW effect when button is clicked
+rainbowEffect.addEventListener("click", rainbowSquares); 
+// Change trail when a different on color wheel is clicked
 colorPicker.on("color:change", function(color) {
     eraser.style.backgroundColor = "yellow"; 
     addHoverEffect(color.hexString);
-    //console.log(color.hexString); 
+    
 });
-
+// Change size of grid whenever slider is changed
 slider.addEventListener("change", () => {
     changeSliderText(slider.value);
     changeGrid(slider.value);
 });
-
+// Eraser when button is clicked
 eraser.addEventListener("click", eraserEffect);
 
 
