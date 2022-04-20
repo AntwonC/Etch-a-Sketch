@@ -7,8 +7,7 @@ https://antwonc.github.io/Etch-a-Sketch/
 
 # Global Variables: 
 -------------------------------------------------------------------------------------------------
-<br>
-DEFAULTSIZE: size of grid  
+DEFAULTSIZE: size of grid<br>  
 MAXRGBVALUE: 255<br> 
 MINRGBVALUE: 0<br> 
 -------------------------------------------------------------------------------------------------
