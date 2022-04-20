@@ -15,7 +15,7 @@ MINRGBVALUE: 0
 -------------------------------------------------------------------------------------------------
 **reloadGrid(value)**
 
-**Parameters** 
+**Parameters**<br> 
 value: size of grid
 
 **Description**
@@ -25,7 +25,7 @@ to get the trailing effect.
 -------------------------------------------------------------------------------------------------
 **addHoverEffect(color)** 
 
-**Parameters** 
+**Parameters**<br> 
 color: the hexcode value of chosen color for trail 
 
 **Description** 
@@ -34,7 +34,7 @@ what is selected for the color wheel.
 -------------------------------------------------------------------------------------------------
 **clearGrid(value)** 
 
-**Parameters** 
+**Parameters**<br> 
 value: Size of the grid 
 
 **Description** 
@@ -42,7 +42,7 @@ This function will clear the grid when the "CLEAR" button is clicked. It will lo
 -------------------------------------------------------------------------------------------------
 **rainbowSquares()** 
 
-**Parameters** 
+**Parameters**<br>
 None 
 
 **Description** 
@@ -51,7 +51,7 @@ Every 10th pixel will 100% be a black pixel just to see if it works properly. Ea
 -------------------------------------------------------------------------------------------------
 **changeSliderText(sliderValue)**
 
-**Parameters** 
+**Parameters**<br>
 sliderValue: selected size of the slider 
 
 **Description** 
@@ -59,7 +59,7 @@ This function visually changes the slider text to the selected grid size.
 -------------------------------------------------------------------------------------------------
 **changeGrid(sliderValue)** 
 
-**Parameters** 
+**Parameters**<br>
 sliderValue: size of the grid that is selected
 
 **Description** 
@@ -67,7 +67,7 @@ This function uses the **clearGrid(sliderValue)** and **reloadGrid(sliderValue)*
 -------------------------------------------------------------------------------------------------
 **eraserEffect()** 
 
-**Parameters**\n 
+**Parameters**<br> 
 None
 
 **Description** 
