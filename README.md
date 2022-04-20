@@ -67,7 +67,7 @@ This function uses the **clearGrid(sliderValue)** and **reloadGrid(sliderValue)*
 -------------------------------------------------------------------------------------------------
 **eraserEffect()** 
 
-**Parameters** 
+**Parameters**\n 
 None
 
 **Description** 
