@@ -7,9 +7,9 @@ https://antwonc.github.io/Etch-a-Sketch/
 
 # Global Variables: 
 -------------------------------------------------------------------------------------------------
-DEFAULTSIZE: size of grid 
-MAXRGBVALUE: 255 
-MINRGBVALUE: 0
+DEFAULTSIZE: size of grid<br>  
+MAXRGBVALUE: 255<br> 
+MINRGBVALUE: 0<br> 
 -------------------------------------------------------------------------------------------------
 # Functions: 
 -------------------------------------------------------------------------------------------------
@@ -89,4 +89,4 @@ pixels and changes the color to white.
 <br> 
 -------------------------------------------------------------------------------------------------
 
-The color wheel picker uses the iro.js color wheel API to get the selected color the user picks.
+**The color wheel picker uses the iro.js color wheel API to get the selected color the user picks.**
