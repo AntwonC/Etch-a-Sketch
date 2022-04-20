@@ -15,7 +15,7 @@ MINRGBVALUE: 0<br>
 -------------------------------------------------------------------------------------------------
 **reloadGrid(value)**
 
-**Parameters**<br> 
+**Parameters:**<br> 
 value: size of grid
 
 **Description:**<br>
@@ -27,7 +27,7 @@ to get the trailing effect.
 -------------------------------------------------------------------------------------------------
 **addHoverEffect(color)** 
 
-**Parameters**<br> 
+**Parameters:**<br> 
 color: the hexcode value of chosen color for trail 
 
 **Description:**<br> 
@@ -38,7 +38,7 @@ what is selected for the color wheel.
 -------------------------------------------------------------------------------------------------
 **clearGrid(value)** 
 
-**Parameters**<br> 
+**Parameters:**<br> 
 value: Size of the grid 
 
 **Description:**<br> 
@@ -48,7 +48,7 @@ This function will clear the grid when the "CLEAR" button is clicked. It will lo
 -------------------------------------------------------------------------------------------------
 **rainbowSquares()** 
 
-**Parameters**<br>
+**Parameters:**<br>
 None 
 
 **Description:**<br> 
@@ -59,7 +59,7 @@ Every 10th pixel will 100% be a black pixel just to see if it works properly. Ea
 -------------------------------------------------------------------------------------------------
 **changeSliderText(sliderValue)**
 
-**Parameters**<br>
+**Parameters:**<br>
 sliderValue: selected size of the slider 
 
 **Description:**<br> 
@@ -69,7 +69,7 @@ This function visually changes the slider text to the selected grid size.
 -------------------------------------------------------------------------------------------------
 **changeGrid(sliderValue)** 
 
-**Parameters**<br>
+**Parameters:**<br>
 sliderValue: size of the grid that is selected
 
 **Description:**<br> 
@@ -79,7 +79,7 @@ This function uses the **clearGrid(sliderValue)** and **reloadGrid(sliderValue)*
 -------------------------------------------------------------------------------------------------
 **eraserEffect()** 
 
-**Parameters**<br> 
+**Parameters:**<br> 
 None
 
 **Description:**<br> 
