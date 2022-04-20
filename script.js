@@ -25,8 +25,6 @@ function reloadGrid(value) {
             actualContainer.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
             actualContainer.style.gridTemplateRows = `repeat(${value}, 1fr)`;
             actualContainer.appendChild(squareElement);  
-    
-           
         
         }
         
@@ -44,7 +42,6 @@ function addHoverEffect(color) {
         squareBox.addEventListener("mouseover", (e) => {
             squareBox.style.backgroundColor = color;
            
-        
         });
     });
 }
